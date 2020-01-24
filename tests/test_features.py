@@ -23,7 +23,10 @@ class TestFeatures(TestCase):
         compare_get_request("/search/:query?", route_parameters = ["I0462"])
 
     def test_searchCount(self):
-        compare_get_request("/searchCount/:query?", route_parameters = ["I0462"])        
+        compare_get_request("/searchCount/:query?", route_parameters = ["I0462"])
+    def test_searchCountWithZeroQuantity(self):
+        compare_get_request("/searchCount/:query?" ,"testCountwithZeroResults", route_parameters = ["nothing"])
+    
 
 #    def test_advancedSearchQuery(self):
 #        compare_get_request("/advancedSearch/:query?", route_parameters = ["I0462"])
