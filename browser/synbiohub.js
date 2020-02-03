@@ -708,6 +708,7 @@ $('form[action="/setup"] select[name="authProvider"]').change(function () {
 
     parentEl.find('div[class^="auth-"]').hide();
     parentEl.find('div.auth-' + providerName).show();
+})
 
 $(document).on('click', '.copyShare', function() {
     let $row = $(this).closest('tr');
@@ -731,3 +732,4 @@ $(document).on('change', 'select#privilege', function() {
 
     $.post(updatePath, { authId: name, newPrivilege: value })
 })
+
